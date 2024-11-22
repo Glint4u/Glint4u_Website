@@ -108,7 +108,7 @@ export default function Page() {
               className={`text-[#EBFF00] text-sm sm:text-base md:text-lg lg:text-xl  ${WorkSans.className}`}
               variants={fadeInUp}
             >
-              We're a web product company focused on design-driven,{" "}
+              We&apos;re a web product company focused on design-driven,{" "}
               <br className="hidden sm:block" />
               out-of-the-box solutions that transform digital experiences.
             </motion.p>
