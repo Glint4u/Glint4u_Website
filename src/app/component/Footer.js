@@ -12,8 +12,8 @@ export default function Footer() {
       >
         <div className="flex flex-col">
           <div className="flex gap-[10px] items-center mb-[30px]">
-            <Image className="" src={Logo} alt=""></Image>
-            <span className="text-[30px]">glint</span>
+            <Image className="max-md:w-[45px]" src={Logo} alt="Logo"></Image>
+            <span className="text-[25px] lg:text-[30px]">glint</span>
           </div>
           <div className="font-semibold mb-2">
             @2024 glint4u All Rights Reserved

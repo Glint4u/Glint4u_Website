@@ -53,10 +53,10 @@ export default function Page() {
   ];
 
   const founders = [
-    { name: "Jaiman Soni", role: "Co-founder" },
-    { name: "Swabhiman Nanda", role: "Co-founder" },
-    { name: "Vimarsh Tiwari", role: "Co-founder" },
-    { name: "Jenish Soni", role: "Co-founder" },
+    { name: "Jaiman Soni", role: "Co-founder", url:"https://www.linkedin.com/in/jaimansoni" },
+    { name: "Swabhiman Nanda", role: "Co-founder", url:"https://www.linkedin.com/in/swabhiman-nanda" },
+    { name: "Vimarsh Tiwari", role: "Co-founder", url:"https://www.linkedin.com/in/vimarsh2013" },
+    { name: "Jenish Soni", role: "Co-founder" , url:"https://www.linkedin.com/in/jenish-soni-a14174224" },
   ];
 
   const fadeInUp = {
@@ -292,13 +292,15 @@ export default function Page() {
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {founders.map((founder, index) => (
+              <a href={founder.url} target="__blank" key={index}>
+
               <motion.div
                 key={index}
                 className="relative h-[200px] sm:h-[225px] md:h-[250px] border-4 rounded-3xl border-[#313513] overflow-hidden flex items-center px-4 sm:px-6"
                 variants={fadeInUp}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-              >
+                >
                 <motion.div
                   className="absolute inset-0 bg-gradient-radial from-[#4e5038] via-[#313319] to-black/80 opacity-70"
                   animate={{ opacity: [0.5, 0.7, 0.5] }}
@@ -307,14 +309,14 @@ export default function Page() {
                     duration: 3,
                     ease: "easeInOut",
                   }}
-                ></motion.div>
+                  ></motion.div>
                 <div className="relative z-10 text-left">
                   <motion.h3
                     className="text-white/90 text-2xl sm:text-3xl md:text-4xl font-bold mb-2"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2, duration: 0.5 }}
-                  >
+                    >
                     {founder.name}
                   </motion.h3>
                   <motion.p
@@ -322,12 +324,13 @@ export default function Page() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.4, duration: 0.5 }}
-                  >
+                    >
                   
                     {founder.role}
                   </motion.p>
                 </div>
               </motion.div>
+            </a>
             ))}
           </div>
         </motion.div>
