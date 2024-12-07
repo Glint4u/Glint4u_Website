@@ -14,6 +14,7 @@ export default function Page() {
       <Link href={"/"}>
         <div>
           <Image src={Logo} alt="logo" className="lg:w-[150px]"></Image>
+          
         </div>
       </Link>
       <div
