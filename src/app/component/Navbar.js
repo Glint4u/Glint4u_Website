@@ -2,35 +2,39 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
+import Logo from "../../../public/logo.svg";
+import { MoveUpRight } from "lucide-react";
+import { f3 } from "../fonts";
 
 export default function Page() {
   const pathname = usePathname();
-  // bg-gradient-to-r #E4E4E4 to-blue-500
   return (
-    <div className="font-sans fixed flex justify-center items-center w-full top-[30px] z-[1000]   ">
-      {/* Navigation Bar */}
-      <nav className=" bg-[#d9d9d92d] backdrop-blur-[10px] w-[230px] h-[60px] rounded-[50px] flex justify-center items-center px-[7px] gap-[10px] ">
-        <Link
-          href="/home"
-          className={`text-[16px] font-medium w-full text-center bg-[#8c8c8c62] h-[80%] rounded-[40px] flex justify-center items-center  ${
-            pathname === "/home"
-              ? "text-gray-200 border-[0.5px] border-gray-400/50"
-              : "bg-[#8c8c8c62]"
-          }`}
-        >
-          Home
+    <div className="absolute  flex justify-evenly items-center w-full top-[30px] z-[1000] ">
+      <Link href={"/"}>
+        <div>
+          <Image src={Logo} alt="logo" className="lg:w-[150px]"></Image>
+        </div>
+      </Link>
+      <div
+        className={` bg-gradient-to-r from-[#171717] to-[#0e0e0e]  w-fit h-fit px-[20px] py-[10px] border border-gray-300/50 flex gap-[70px] rounded-[30px] text-white text-2xl ${f3.className} italic`}
+      >
+        <Link href={"/"}>
+          <div>Home</div>
         </Link>
-        <Link
-          href="/work"
-          className={`text-[16px] font-medium w-full text-center bg-[#8c8c8c62] h-[80%] rounded-[40px] flex justify-center items-center  ${
-            pathname === "/work"
-              ? "text-gray-200 border-[0.5px] border-gray-400/50"
-              : "bg-[#8c8c8c62]"
-          }`}
-        >
-          Work
+        <Link href={"/work"}>
+          <div>Work</div>
         </Link>
-      </nav>
+        <Link href={"/contact"}>
+          <div>Contact</div>
+        </Link>
+      </div>
+      <div
+        className={` bg-gradient-to-r from-[#171717] to-[#0f0f0f] w-fit h-fit px-[20px] py-[10px] border border-gray-300/50 rounded-[30px] text-white text-2xl flex items-baseline justify-center gap-[10px] ${f3.className}`}
+      >
+        start a project
+        <MoveUpRight size={17} />
+      </div>
     </div>
   );
 }

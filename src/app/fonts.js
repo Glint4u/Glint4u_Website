@@ -1,4 +1,4 @@
-import { Inter, Bricolage_Grotesque, Latin, Work_Sans, Instrument_Serif  } from 'next/font/google';
+import { Inter, Bricolage_Grotesque, Latin, Work_Sans, Instrument_Serif, open_sauce  } from 'next/font/google';
 
 export const bri = Bricolage_Grotesque({
   subsets: ['latin'],
@@ -30,5 +30,11 @@ export const f1 = Work_Sans({
 export const f2 = Instrument_Serif({
   subsets: ['latin'],
   display: 'swap',
-  weight:['400']
+  weight:['400'],
+});
+export const f3 = Instrument_Serif({
+  subsets: ['latin'],
+  display: 'swap',
+  weight:['400'],
+  style:'italic'
 });
