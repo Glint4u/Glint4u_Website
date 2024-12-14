@@ -1,6 +1,7 @@
 import "./globals.css";
 import Footer from "./component/Footer";
 import Navbar from './component/Navbar';
+import TestimonialSection from "./component/TestimonialSection";
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
@@ -13,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
       <Analytics />
-        <Navbar/>
+        {/* <Navbar/> */}
         {children}
         <Footer/>
       </body>
