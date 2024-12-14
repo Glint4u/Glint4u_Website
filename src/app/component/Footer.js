@@ -3,10 +3,11 @@ import Image from "next/image";
 import { f1, f2 } from "../fonts";
 import Logo from "../../../public/work/logo.png";
 import Link from "next/link";
+import AnimatedPath from "./AnimatedPath";
 export default function Footer() {
   return (
     <div className=" flex flex-col bg-black w-full min-h-[300px] h-fit py-[20px] px-[40px] text-white">
-      <div className="w-full lg:w-[95%] mx-auto h-[0.5px] bg-[#D9D9D95f]"></div>
+      <AnimatedPath/>
       <div
         className={` ${f1.className} flex max-sm:flex-col justify-between mt-[40px] lg:mt-[60px]`}
       >
@@ -15,6 +16,7 @@ export default function Footer() {
             <Image className="max-md:w-[45px]" src={Logo} alt="Logo"></Image>
             <span className="text-[25px] lg:text-[30px]">glint</span>
           </div>
+        
           <div className="font-semibold mb-2">
             @2024 glint4u All Rights Reserved
           </div>

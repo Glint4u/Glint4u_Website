@@ -19,3 +19,8 @@ body {
     background: radial-gradient(circle, #dbe09ebd 5%, #8c990091 90%, black 5%);
   }
   
+  .outlined-text {
+    -webkit-text-stroke: 3px #999999; /* Border width and color */
+    color: transparent;               /* Make the text transparent */
+  }
+  
