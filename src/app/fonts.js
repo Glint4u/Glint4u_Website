@@ -1,40 +1,38 @@
-import { Inter, Bricolage_Grotesque, Latin, Work_Sans, Instrument_Serif, open_sauce  } from 'next/font/google';
+import localFont from 'next/font/local';
+import { Inter, Instrument_Serif } from 'next/font/google';
 
-export const bri = Bricolage_Grotesque({
-  subsets: ['latin'],
+export const osoitalic = localFont({
+  src: './fonts/open-sauce.one-italic.ttf',
   display: 'swap',
 });
 
-export const bri2 = Bricolage_Grotesque({
-  subsets: ['latin'],
+export const osoregular = localFont({
+  src: './fonts/open-sauce.one-regular.ttf',
   display: 'swap',
-  weight: ['700'], // Change 400 to '400' as a string
 });
 
-export const bri3 = Bricolage_Grotesque({
-    subsets: ['latin'],
-    display: 'swap',
-    weight: ['400'], // Change 400 to '400' as a string
-  });
+export const osolight = localFont({
+  src: './fonts/open-sauce.one-light.ttf',
+  display: 'swap',
+});
 
 export const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
 });
 
-export const f1 = Work_Sans({
-  subsets: ['latin'],
-  display: 'swap',
-  weight:['300']
-});
+export const f1 = osoregular; // Use the defined local font directly
+export const italic = osoitalic
+export const light = osolight
 export const f2 = Instrument_Serif({
   subsets: ['latin'],
   display: 'swap',
-  weight:['400'],
+  weight: '400', // Ensure the weight is passed as a string, not an array
 });
+
 export const f3 = Instrument_Serif({
   subsets: ['latin'],
   display: 'swap',
-  weight:['400'],
-  style:'italic'
+  weight: '400',
+  style: 'italic',
 });
