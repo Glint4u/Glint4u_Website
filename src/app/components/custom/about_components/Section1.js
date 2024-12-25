@@ -1,5 +1,5 @@
 import React from "react";
-import { Spotlight } from "../../ui/spotlight";
+import { Spotlight } from "../../ui/Spotlight";
 import { HoverBorderGradient } from "../../ui/HoverBorderGradient";
 import { Phone, CalendarCheck, MessageCircleMore, House } from "lucide-react";
 
