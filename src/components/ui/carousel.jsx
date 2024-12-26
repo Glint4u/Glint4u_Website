@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react"
-import useEmblaCarousel from "embla-carousel-react";
-import { ArrowLeft, ArrowRight } from "lucide-react"
+import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -18,21 +18,21 @@ function useCarousel() {
   return context
 }
 
-const Carousel = React.forwardRef((
-  {
-    orientation = "horizontal",
-    opts,
-    setApi,
-    plugins,
-    className,
-    children,
-    ...props
-  },
-  ref
-) => {
+const Carousel = React.forwardRef(({
+  orientation = "horizontal",
+  opts,
+  setApi,
+  plugins,
+  className,
+  children,
+  autoplay = true,
+  autoplayInterval = 2000,
+  ...props
+}, ref) => {
   const [carouselRef, api] = useEmblaCarousel({
     ...opts,
     axis: orientation === "horizontal" ? "x" : "y",
+    loop: true, // Enable looping
   }, plugins)
   const [canScrollPrev, setCanScrollPrev] = React.useState(false)
   const [canScrollNext, setCanScrollNext] = React.useState(false)
@@ -64,6 +64,19 @@ const Carousel = React.forwardRef((
     }
   }, [scrollPrev, scrollNext])
 
+  // Autoplay functionality
+  React.useEffect(() => {
+    if (!api || !autoplay) {
+      return
+    }
+
+    const intervalId = setInterval(() => {
+      api.scrollNext()
+    }, autoplayInterval)
+
+    return () => clearInterval(intervalId)
+  }, [api, autoplay, autoplayInterval])
+
   React.useEffect(() => {
     if (!api || !setApi) {
       return
@@ -87,7 +100,7 @@ const Carousel = React.forwardRef((
   }, [api, onSelect])
 
   return (
-    (<CarouselContext.Provider
+    <CarouselContext.Provider
       value={{
         carouselRef,
         api: api,
@@ -108,10 +121,11 @@ const Carousel = React.forwardRef((
         {...props}>
         {children}
       </div>
-    </CarouselContext.Provider>)
+    </CarouselContext.Provider>
   );
 })
 Carousel.displayName = "Carousel"
+
 
 const CarouselContent = React.forwardRef(({ className, ...props }, ref) => {
   const { carouselRef, orientation } = useCarousel()
@@ -192,3 +206,4 @@ const CarouselNext = React.forwardRef(({ className, variant = "outline", size = 
 CarouselNext.displayName = "CarouselNext"
 
 export { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext };
+
