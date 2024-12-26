@@ -10,7 +10,7 @@ import { FaXTwitter } from "react-icons/fa6";
 export default function Footer() {
     return (
         <div className='w-full min-h-[400px] h-fit pt-[50px] footer-bg border-t-[3px] border-[#ffffff1b] '>
-            <div className=' w-[85%] min-h-[300px] h-fit m-auto flex flex-col md:flex-row justify-between gap-[30px] '>
+            <div className=' w-[85%] p-2 min-h-[300px] h-fit m-auto flex flex-col md:flex-row justify-between gap-[50px] '>
                 <div className='flex justify-between w-full md:w-[45%]'>
                     <div className='flex flex-col gap-[30px]'>
                         <Image className=' w-[100px] md:w-[150px]' src={Logo} />
@@ -30,11 +30,13 @@ export default function Footer() {
                     </div>
                     <div className='flex text-[#ffffff7c] text-[17px]'>
                         <div>
-                            <ul className='flex flex-col gap-[20px]'>
+                            <ul className='flex flex-col gap-[20px] text-center '>
                                 <Link href="/about">
                                     <li>About</li>
                                 </Link>
+                                <Link href={"/service"}>
                                 <li>Services</li>
+                                </Link>
                                 <Link href="/portfolio">
                                     <li>Portfolio</li>
                                 </Link>
@@ -48,7 +50,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className=' flex flex-col gap-[50px] justify-start items-center md:items-start'>
+                <div className=' flex flex-col gap-[30px] justify-start items-center md:items-start'>
                     <div className=' text-center md:text-start'>
                         <div className='text-white'>Subscribe to our newsletter</div>
                         <div className='text-[#ffffff70]'>Get updates and news in your inbox. No spam.</div>

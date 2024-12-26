@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <div className='fixed w-full top-[40px] z-[10000]'>
-      <div className={` ${navOpen ? "pb-[30px] h-[330px]" : "h-[70px]"} md:h-[70px] backdrop-blur-[14px] transition-half-second nav-bg w-[85%] m-auto border-[#ffffff1c] border-[1.3px] px-[3%] rounded-[20px] overflow-hidden `}>
+      <div className={` ${navOpen ? "pb-[30px] h-[330px]" : "h-[70px]"} md:h-[70px] backdrop-blur-[20px] transition-half-second nav-bg w-[85%] m-auto border-[#ffffff1c] border-[1.3px] px-[3%] rounded-[20px] overflow-hidden `}>
 
         <div className='flex justify-between items-center w-full h-[70px]'>
           <div>
@@ -24,7 +24,9 @@ export default function Navbar() {
               <Link href="/about">
                 <li className={`nav-text `}>About</li>
               </Link>
+              <Link href={"/service"} >
               <li className={`nav-text `}>Services</li>
+              </Link>
               <Link href="/portfolio">
                 <li className='nav-text'>Portfolio</li>
               </Link>
@@ -49,7 +51,9 @@ export default function Navbar() {
             <Link href="/about" onClick={() => { setNavOpen(false) }}>
               <li className='nav-text'>About</li>
             </Link>
+            <Link href={"/service"} onClick={() => { setNavOpen(false) }}>
             <li className='nav-text'>Services</li>
+            </Link>
             <Link href="/portfolio"  onClick={() => { setNavOpen(false) }}>
               <li className='nav-text'>Portfolio</li>
             </Link>
