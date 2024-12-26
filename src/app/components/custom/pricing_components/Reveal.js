@@ -31,7 +31,7 @@ export function VortexDemoSecond() {
                 particleCount={500}
                 baseHue={120}
                 className="flex items-center flex-col justify-center px-2 md:px-10  py-4 w-full h-full">
-                <div className="w-[85%] m-auto">
+                <div className="w-[85%] m-auto flex items-center flex-col justify-center  ">
                     <h2 className="text-white text-2xl md:text-6xl font-bold text-center">
                         Limited Time Offer: First Five Clients Free!
                     </h2>
