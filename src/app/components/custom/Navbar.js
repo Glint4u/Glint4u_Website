@@ -34,7 +34,7 @@ export default function Navbar() {
                 <li className={`nav-text `}>Pricing</li>
               </Link>
               <Link href={"/contact"} >
-              <li className={` cursor-pointer w-[90px] h-[35px] bg-white rounded-[10px] flex justify-center items-center ${InterVariable.className} `}>Contact</li>
+              <li className={` cursor-pointer w-[90px] h-[35px] bg-white rounded-[10px] flex justify-center items-center text-black ${InterVariable.className} `}>Contact</li>
               </Link>
             </ul>
 

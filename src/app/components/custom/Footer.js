@@ -1,13 +1,54 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react';
 import Image from 'next/image'
 import Link from 'next/link'
 import Logo from "../../../../public/logo.svg"
-
+import { toast } from 'react-hot-toast';
 import { Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
 import { FaXTwitter } from "react-icons/fa6";
 
 
-export default function Footer() {
+export default function Footer() 
+{
+    const [email, setEmail] = useState('');
+    const [loading, setLoading] = useState(false);
+
+    const handleSubscribe = async (e) => {
+        e.preventDefault();
+
+        // Basic validation
+        if (!email) {
+            toast.error("Please enter a valid email.");
+            return;
+        }
+
+        setLoading(true);
+
+        try {
+            const response = await fetch('/api/subscribe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email }),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                toast.success("Subscription successful! Thank you.");
+                setEmail('');
+            } else {
+                toast.error(result.error || "Something went wrong, please try again.");
+            }
+        } catch (error) {
+            toast.error("An error occurred, please try again.");
+        } finally {
+            setLoading(false);
+        }
+    };
+
+
     return (
         <div className='w-full min-h-[400px] h-fit pt-[50px] footer-bg border-t-[3px] border-[#ffffff1b] '>
             <div className=' w-[85%] p-2 min-h-[300px] h-fit m-auto flex flex-col md:flex-row justify-between gap-[50px] '>
@@ -56,9 +97,22 @@ export default function Footer() {
                         <div className='text-[#ffffff70]'>Get updates and news in your inbox. No spam.</div>
                     </div>
                     <div className=''>
-                        <form action="" className='flex flex-wrap items-center justify-center gap-[20px] pb-[20px] '>
-                            <input type="text" className=' text-[#ffffff41] font-normal text-[14px] md:text-[16px] w-[200px] h-[40px] md:w-[250px] md:h-[45px] rounded-[10px] pl-[20px] bg-[#46464641] border-[1px] border-[#ffffff16]' placeholder='glint4u@gmail.com' />
-                            <button type="submit" className=' font-medium text-[14px] md:text-[16px] w-[150px] h-[40px] md:w-[150px] md:h-[45px] bg-[#D9D9D9] rounded-[10px]'>Subscribe</button>
+                        <form onSubmit={handleSubscribe} className='flex flex-wrap items-center justify-center gap-[20px] pb-[20px] '>
+                            <input
+                                type="email"
+                                className='text-[#ffffff41] font-normal text-[14px] md:text-[16px] w-[200px] h-[40px] md:w-[250px] md:h-[45px] rounded-[10px] pl-[20px] bg-[#46464641] border-[1px] border-[#ffffff16]'
+                                placeholder='glint4u@gmail.com'
+                                value={email}
+                                disabled={loading}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                            <button
+                                type="submit"
+                                className='font-medium text-[14px] md:text-[16px] w-[150px] h-[40px] md:w-[150px] md:h-[45px] bg-[#D9D9D9] rounded-[10px] text-black'
+                                disabled={loading}
+                            >
+                                {loading ? "Subscribing..." : "Subscribe"}
+                            </button>
                         </form>
                     </div>
                 </div>
