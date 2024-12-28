@@ -1,5 +1,6 @@
 import React from "react";
 import { Spotlight } from "../../ui/Spotlight";
+import Link from "next/link";
 import { HoverBorderGradient } from "../../ui/HoverBorderGradient";
 import { Phone, CalendarCheck, MessageCircleMore, House } from "lucide-react";
 
@@ -19,19 +20,18 @@ export default function SpotlightPreview() {
                     </h1>
                     <p
                         className=" w-[85%] m-auto text-[14px] mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
-                        Spotlight effect is a great way to draw attention to a specific part
-                        of the page. Here, we are drawing the attention towards the text
-                        section of the page. I don&apos;t know why but I&apos;m running out of
-                        copy.
+                       Where every interaction feels effortless and every design is crafted to perfection. At glint, we focus on the details that matter, delivering a seamless experience that’s as intuitive as it is beautiful.
                     </p>
                 </div>
                 <div>
-                    <div className=' w-[85%] m-auto flex flex-wrap items-center justify-center text-white mt-[40px] md:mt-[50px] gap-[20px]'>
+                    <div className=' w-[85%] m-auto flex flex-wrap items-center  justify-center text-white mt-[40px] md:mt-[50px] gap-[20px]'>
+                        <Link href="https://cal.com/glint" target="_blank">
                         <HoverBorderGradient className="shadow-2xl">
                             <span className="flex items-center gap-[10px] whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
                                 <CalendarCheck size={19} /> Book a strategy call
                             </span>
                         </HoverBorderGradient>
+                        </Link>
                         <a href="/">
                             <HoverBorderGradient className="shadow-2xl">
                                 <span className="flex items-center gap-[10px] whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
