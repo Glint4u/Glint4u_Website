@@ -75,7 +75,7 @@ export const InfiniteMovingCards = ({
               background:
                 "#111111",
             }}
-            key={item.name}>
+            key={item.id}>
             <blockquote>
               <div
                 aria-hidden="true"

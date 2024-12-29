@@ -12,7 +12,7 @@ export default function TimelineDemo() {
         <div className="flex flex-col justify-center h-full">
           <p
             className="text-neutral-800 dark:text-neutral-500 text-[16px] md:text-[18px] font-normal mb-8">
-            We focus on understanding your goals and delivering personalized solutions that align perfectly with your vision.
+            We prioritize your needs above all. Every solution we craft revolves around your goals, ensuring a seamless and personalized experience from start to finish.
           </p>
           {/* <div className="grid grid-cols-2 gap-4">
             <Image
@@ -49,12 +49,9 @@ export default function TimelineDemo() {
         <div className="flex flex-col justify-center h-full">
           <p
             className="text-neutral-800 dark:text-neutral-500 text-[16px] md:text-[18px] font-normal mb-8">
-            We don’t just follow trends; we set them.
+            We push boundaries to deliver exceptional solutions. Our focus is on crafting unique, innovative experiences that stand out and make a lasting impact.
           </p>
-          <p
-            className="text-neutral-800 dark:text-neutral-500 text-[16px] md:text-[18px] font-normal mb-8">
-            Our designs and solutions stand out by pushing creative and technological boundaries.
-          </p>
+
           {/* <div className="grid grid-cols-2 gap-4">
             <Image
               src="https://assets.aceternity.com/pro/hero-sections.png"
@@ -89,35 +86,9 @@ export default function TimelineDemo() {
       content: (
         <div className="flex flex-col justify-center h-full text-neutral-500 ">
           <div className="text-[16px] md:text-[18px] mb-[10px]">
-            <b>
-            Tech isn't just functional; it's transformative.
-            </b>
-            <p>
-            We engineer systems that don't just work but elevate your business to new heights. Here's how we do it:
-            </p>
+          Every solution we create is designed to transform ideas into powerful results. We don’t just deliver; we elevate your business to new heights.
           </div>
-          <div className="mb-8 flex flex-col gap-[8px]">
-            <div
-              className="flex gap-2 items-center text-neutral-700 dark:text-neutral-500 text-[16px] md:text-[18px]">
-              ✅ Custom Solutions
-            </div>
-            <div
-              className="flex gap-2 items-center text-neutral-700 dark:text-neutral-500 text-[16px] md:text-[18px]">
-              ✅ Scalable Design
-            </div>
-            <div
-              className="flex gap-2 items-center text-neutral-700 dark:text-neutral-500 text-[16px] md:text-[18px]">
-              ✅ User-Centric Approach
-            </div>
-            <div
-              className="flex gap-2 items-center text-neutral-700 dark:text-neutral-500 text-[16px] md:text-[18px]">
-              ✅ Cutting-Edge Technology
-            </div>
-            <div
-              className="flex gap-2 items-center text-neutral-700 dark:text-neutral-500 text-[16px] md:text-[18px]">
-              ✅ Reliable Support
-            </div>
-          </div>
+          
           {/* <div className="grid grid-cols-2 gap-4">
             <Image
               src="https://assets.aceternity.com/pro/hero-sections.png"

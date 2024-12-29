@@ -27,7 +27,7 @@ export function ThreeDCardDemo() {
         },
         {
             image: AWSCCImage,
-            title: "Burger Bistro",
+            title: "AWS Cloud CLUB SOU",
             description: " We built a dynamic website for our college's AWS Community, enabling them to share updates on upcoming events, courses, and resources, fostering collaboration and growth.",
             url: "https://awscc.vercel.app/"
         },
@@ -57,6 +57,7 @@ export function ThreeDCardDemo() {
                                     src={item.image}
                                     height="1000"
                                     width="1000"
+                                    loading="lazy"
                                     className="w-full object-cover rounded-xl group-hover/card:shadow-xl"
                                     alt={item.title} />
                             </CardItem>

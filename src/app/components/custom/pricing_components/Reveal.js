@@ -21,7 +21,7 @@ import React from "react";
 import { Vortex } from "../../ui/Vortex";
 import Link from "next/link";
 import { HoverBorderGradient } from "../../ui/HoverBorderGradient";
-import { Phone, CalendarCheck, MessageCircleMore } from "lucide-react";
+import { Phone, CalendarCheck, MessageCircleMore ,Info } from "lucide-react";
 
 
 
@@ -32,15 +32,18 @@ export function VortexDemoSecond() {
             <Vortex
                 backgroundColor="black"
                 rangeY={800}
-                particleCount={500}
-                baseHue={120}
+                particleCount={250}
+                baseHue={60}
                 className="flex items-center flex-col justify-center px-2 md:px-10  py-4 w-full h-full">
                 <div className="w-[85%] m-auto flex items-center flex-col justify-center  ">
                     <h2 className="text-white text-2xl md:text-6xl font-bold text-center">
-                        Limited Time Offer: First Five Clients Free!
+                    For a limited time, the first few clients will receive our services for free!
                     </h2>
-                    <p className="text-white text-sm md:text-2xl max-w-xl mt-[15px] text-center">
-                        First five clients enjoy our services free! Grab the chance to kickstart your journey with Glint now!
+                    <p className="text-white text-sm md:text-2xl mt-[15px] text-center">
+                        Grab the chance to kickstart your journey with glint now!
+                    </p>
+                    <p className="flex gap-1 justify-center items-center mt-7 text-gray-400">
+                    <Info size={20} />Terms and conditions applied.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
                         <HoverBorderGradient className="shadow-2xl">
