@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+/* html{
   scroll-behavior: smooth;
-}
+} */
 
 .slick-track{
   display: flex;
@@ -196,7 +196,7 @@ body {
   100% { transform: rotate(360deg); }
 }
 
-/* 
+
 input::placeholder{
   color: #ffffff41;
 }
@@ -218,4 +218,4 @@ textarea::-ms-input-placeholder {
 
 textarea{
   color: #bcbcbc !important;
-} */
+}
