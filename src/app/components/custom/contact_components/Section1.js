@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { toast } from "react-hot-toast";
+import { ChevronDown } from "lucide-react";
 
 export default function Section1() {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ export default function Section1() {
     email: "",
     service: "",
     message: "",
+    phoneNumber: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -29,7 +31,8 @@ export default function Section1() {
       !formData.lastName ||
       !formData.email ||
       !formData.service ||
-      !formData.message
+      !formData.message ||
+      !formData.phoneNumber
     ) {
       toast.error("Please fill in all fields.");
       return;
@@ -57,6 +60,7 @@ export default function Section1() {
           email: "",
           service: "",
           message: "",
+          phoneNumber: "",
         });
       } else {
         toast.error(result.error || "Something went wrong.");
@@ -71,7 +75,7 @@ export default function Section1() {
   return (
     <div className="w-[85%] m-auto min-h-[500px] bg-black h-fit pt-[140px] pb-[50px]">
       <div className="text-center">
-        <div className="unique-text text-[30px] md:text-[50px] font-medium">
+        <div className="unique-text text-[30px] md:text-[50px] font-bold">
           Get in Touch with Us
         </div>
         <div className="text-[#6E6E6E] text-[15px] md:text-[20px] font-normal">
@@ -79,17 +83,7 @@ export default function Section1() {
         </div>
       </div>
       <div>
-        <div className="gap-[20px] flex flex-col justify-center p-[15px] md:p-[25px] sm:min-w-[400px] w-[100%] sm:w-[60%] m-auto border-[1px] border-[#6E6E6E] min-h-[500px] h-fit rounded-[10px] mt-[50px]">
-          <div>
-            <div className="text-[#ffffff] text-[25px] font-semibold">
-              Welcome to glint
-            </div>
-            <div className="text-[#6E6E6E] text-[15px] font-normal">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
-              doloribus porro maxime vel alias ipsum.
-            </div>
-          </div>
-
+        <div className=" nav-bg  gap-[20px] flex flex-col justify-center p-[15px] md:p-[25px] sm:min-w-[400px] w-[100%] sm:w-[60%] m-auto border-[1px] border-[#36363683] min-h-[500px] h-fit rounded-[10px] mt-[50px]">
           <form
             onSubmit={handleSubmit}
             className="flex flex-col gap-[30px] text-[#9e9e9e]"
@@ -98,7 +92,7 @@ export default function Section1() {
               <div className="flex flex-col w-full gap-[8px]">
                 <label htmlFor="">First Name</label>
                 <input
-                  placeholder="Tyler"
+                  placeholder="Alex"
                   className="text-[16px] border-[#ffffff4c] focus:border-[#ffffff8e] text-[#ffffff89] font-normal w-full bg-[#27272A] border-[1px] outline-none h-[50px] rounded-[8px] px-[10px]"
                   type="text"
                   name="firstName"
@@ -109,7 +103,7 @@ export default function Section1() {
               <div className="flex flex-col w-full gap-[8px]">
                 <label htmlFor="">Last Name</label>
                 <input
-                  placeholder="Durden"
+                  placeholder="Mercer"
                   className="text-[16px] border-[#ffffff4c] focus:border-[#ffffff8e] text-[#ffffff89] font-normal w-full bg-[#27272A] border-[1px] outline-none h-[50px] rounded-[8px] px-[10px]"
                   type="text"
                   name="lastName"
@@ -130,16 +124,27 @@ export default function Section1() {
                 onChange={handleChange}
               />
             </div>
+            <div className="flex flex-col w-full gap-[8px]">
+              <label htmlFor="PhoneNumber">Phone Number</label>
+              <input
+                placeholder="9234567890"
+                className="text-[16px] border-[#ffffff4c] focus:border-[#ffffff8e] text-[#ffffff89] font-normal w-full bg-[#27272A] border-[1px] outline-none h-[50px] rounded-[8px] px-[10px]"
+                type="tel"
+                name="phoneNumber"
+                value={formData.phoneNumber}
+                onChange={handleChange}
+              />
+            </div>
 
-            <div className="flex flex-col gap-[8px]">
-              <label htmlFor="">What Service Are You Interested In?</label>
+            <div className="flex flex-col gap-[8px] relative">
+              <label htmlFor="">What service are you interested in?</label>
               <select
-                className="text-[16px] border-[#ffffff4c] text-[#ffffff89] focus:border-[#ffffff8e] font-normal w-full bg-[#27272A] border-[1px] outline-none h-[50px] rounded-[8px] px-[10px]"
+                className="text-[16px] appearance-none border-[#ffffff4c] text-[#ffffff89] focus:border-[#ffffff8e] font-normal w-full bg-[#27272A] border-[1px] outline-none h-[50px] rounded-[8px] px-[10px]"
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
               >
-                <option value="Select a Service">Select a Service</option>
+                <option value="Select a service">Select a service</option>
                 <option value="UI/UX Design">UI/UX Design</option>
                 <option value="Static Website Development">
                   Static Website Development
@@ -153,6 +158,9 @@ export default function Section1() {
                 <option value="IT Consulting">IT Consulting</option>
                 <option value="Web Hosting">Web Hosting</option>
               </select>
+              <div className="absolute right-[15px] top-[47px]">
+                <ChevronDown size={20} />
+              </div>
             </div>
 
             <div className="flex flex-col gap-[8px]">
@@ -170,7 +178,7 @@ export default function Section1() {
 
             <button
               type="submit"
-              className={`text-[16px] border-[#ffffff4c] border-[1px] md:text-[18px] flex justify-center items-center h-[50px] rounded-[8px] w-full mx-auto bg-[#18181A] ${
+              className={`text-[16px] border-[#ffffff4c] hover:bg-white/90 hover:text-black duration-350 transition-all  border-[1px] md:text-[18px] flex justify-center items-center h-[50px] rounded-[8px] w-full mx-auto bg-[#18181A] ${
                 loading ? "opacity-50 cursor-not-allowed" : ""
               }`}
               disabled={loading}

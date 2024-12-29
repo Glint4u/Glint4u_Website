@@ -34,6 +34,7 @@ const testimonials = [
         quote:
             "Glint has been an absolute game-changer for us! Its intuitive interface, robust analytics, and seamless collaboration features have elevated the way we approach projects and team management. ",
         name: "Maulik Soni",
+        id:1,
         title: "Director, Shriji Education Services",
         image: MaulikSoni,
     },
@@ -41,6 +42,7 @@ const testimonials = [
         quote:
             "They have truly impressed me with its sleek, modern design and efficient backend system. The intuitive, responsive interface and secure, reliable performance make it a standout choice. I highly recommend it for anyone seeking exceptional design and functionality",
         name: "Sachin Mishra",
+        id:2,
         title: "Owner, Burger Bistro",
         image: SachinMishra,
     },
@@ -48,6 +50,7 @@ const testimonials = [
         quote:
             "Glint has been an absolute game-changer for us! Its intuitive interface, robust analytics, and seamless collaboration features have elevated the way we approach projects and team management. ",
         name: "Maulik Soni",
+        id:3,
         title: "Director, Shriji Education Services",
         image: MaulikSoni,
     },
@@ -55,6 +58,7 @@ const testimonials = [
         quote:
             "They have truly impressed me with its sleek, modern design and efficient backend system. The intuitive, responsive interface and secure, reliable performance make it a standout choice. I highly recommend it for anyone seeking exceptional design and functionality",
         name: "Sachin Mishra",
+        id:4,
         title: "Owner, Burger Bistro",
         image: SachinMishra,
     },
@@ -62,6 +66,7 @@ const testimonials = [
         quote:
             "Glint has been an absolute game-changer for us! Its intuitive interface, robust analytics, and seamless collaboration features have elevated the way we approach projects and team management. ",
         name: "Maulik Soni",
+        id:5,
         title: "Director, Shriji Education Services",
         image: MaulikSoni,
     },
@@ -69,6 +74,7 @@ const testimonials = [
         quote:
             "They have truly impressed me with its sleek, modern design and efficient backend system. The intuitive, responsive interface and secure, reliable performance make it a standout choice. I highly recommend it for anyone seeking exceptional design and functionality",
         name: "Sachin Mishra",
+        id:6,
         title: "Owner, Burger Bistro",
         image: SachinMishra,
     },

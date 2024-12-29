@@ -6,7 +6,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 // FAQ data array
 const faqData = [
   {
-    question: "What services does Glint provide?",
+    question: "What services does glint provide?",
     answer: "We offer UI/UX design, website development, API development, DevOps, SEO, IT consulting, and web hosting."
   },
   {
