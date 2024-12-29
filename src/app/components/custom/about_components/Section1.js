@@ -19,7 +19,7 @@ export default function SpotlightPreview() {
                         <span> to User Experience. </span>
                     </h1>
                     <p
-                        className=" w-[85%] m-auto text-[14px] mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
+                        className="w-[90%] md:w-[95%] m-auto text-[14px] mt-4 font-normal text-base text-neutral-300 max-w-[600px] text-center mx-auto">
                        Where every interaction feels effortless and every design is crafted to perfection. At glint, we focus on the details that matter, delivering a seamless experience that’s as intuitive as it is beautiful.
                     </p>
                 </div>

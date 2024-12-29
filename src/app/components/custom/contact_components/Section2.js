@@ -46,9 +46,9 @@ const FAQItem = ({ item, isOpen, toggleOpen }) => {
       >
         <span className="text-lg font-medium">{item.question}</span>
         {isOpen ? (
-          <ChevronUp className="w-5 h-5 text-gray-400" />
+          <ChevronUp className="min-w-5 min-h-5 text-gray-400" />
         ) : (
-          <ChevronDown className="w-5 h-5 text-gray-400" />
+          <ChevronDown className="min-w-5 min-h-5 text-gray-400" />
         )}
       </button>
       <div

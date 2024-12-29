@@ -21,9 +21,9 @@ export default function Section3() {
                     </div>
                 </div>
                 <div className='flex flex-col justify-center items-center md:w-[50%]'>
-                    <Image className='max-w-[500px] mb-[30px] w-[100%] ' alt="team" src={Team} />
-                    <div className='text-[#ffffff88] w-[90%] m-auto text-[14px] md:text-[17px] '>
-                        glint Co-founders Jaiman Soni, Swabhiman Nanda, Jenish Soni, Vimarsh Tiwari.
+                    <Image className='max-w-[500x] mb-[30px] w-[100%] ' alt="team" src={Team} />
+                    <div className='text-[#ffffff88] text-left  w-full m-auto text-[14px] md:text-[17px] '>
+                    glint was founded by a dynamic team of innovators—Jaiman Soni, Swabhiman Nanda, Vimarsh Tiwari, and Jenish Soni 
                     </div>
                 </div>
             </div>
