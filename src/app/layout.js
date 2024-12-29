@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         <Toaster position="bottom-right"
         reverseOrder={false}/>
-        {/* <Navbar /> */}
+        <Navbar />
         {children}
         <Footer />
       </body>
