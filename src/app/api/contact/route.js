@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { google } from "googleapis";
+import getGoogleAuth from "../../utils/auth";
 
 export async function POST(req, res) {
   const { firstName, lastName, email, service, message, phoneNumber } = await req.json();
@@ -9,9 +10,23 @@ export async function POST(req, res) {
       { error: "All fields are required" },
       { status: 400 }
     );
+  
   }
-
   try {
+    const auth = getGoogleAuth();
+    const sheets = google.sheets({ version: "v4", auth });
+    const spreadsheetId = process.env.SPREADSHEET_ID; 
+    const range = "glint contact page!A:F";
+    
+    await sheets.spreadsheets.values.append({
+      spreadsheetId,
+      range,
+      valueInputOption: "USER_ENTERED",
+      requestBody: {
+        values: [[firstName, lastName, email, service, message , phoneNumber]],
+      },
+    });
+    
     const transporter = nodemailer.createTransport({
       service: "Gmail",
       auth: {
@@ -68,23 +83,6 @@ export async function POST(req, res) {
       html: devEmailHTML,
     });
 
-    const auth = new google.auth.GoogleAuth({
-      keyFile: "C:/Users/swabh/OneDrive/Desktop/Glint4u_Website/credentials.json",
-      scopes: ["https://www.googleapis.com/auth/spreadsheets"],
-    });
-
-    const sheets = google.sheets({ version: "v4", auth });
-    const spreadsheetId = process.env.SPREADSHEET_ID; 
-    const range = "glint contact page!A:F";
-
-    await sheets.spreadsheets.values.append({
-      spreadsheetId,
-      range,
-      valueInputOption: "USER_ENTERED",
-      requestBody: {
-        values: [[firstName, lastName, email, service, message , phoneNumber]],
-      },
-    });
 
     return NextResponse.json(
       { message: "Message sent successfully" },

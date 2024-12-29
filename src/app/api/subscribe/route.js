@@ -1,28 +1,44 @@
+// app/api/subscribe/route.js
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import { google } from "googleapis";
+import getGoogleAuth  from "../../utils/auth";
 
 export async function POST(req, res) {
   const { email } = await req.json();
-
+  
   if (!email) {
     return NextResponse.json(
       { error: "All fields are required" },
       { status: 400 }
     );
   }
-
+  
   try {
-    // Create transporter for sending email via Gmail
+    const auth = getGoogleAuth();
+    const sheets = google.sheets({ version: "v4", auth });
+    const spreadsheetId = process.env.SPREADSHEET_ID;
+    const range = "subscription!A:B";
+  
+    const timestamp = new Date().toISOString();
+  
+    // Append to Google Sheets
+    await sheets.spreadsheets.values.append({
+      spreadsheetId,
+      range,
+      valueInputOption: "USER_ENTERED",
+      requestBody: {
+        values: [[timestamp, email]],
+      },
+    });
     const transporter = nodemailer.createTransport({
       service: "Gmail",
       auth: {
-        user: process.env.EMAIL_USER, // Your email
-        pass: process.env.EMAIL_PASS, // Your email password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
-    // Email HTML for the user
     const emailHTML = `
     <div style="text-align: center; font-family: Arial, sans-serif; padding: 20px;">
         <img src="https://res.cloudinary.com/dessvl8l8/image/upload/f_auto,q_auto/zrrbrgiph9iycaabzth1" alt="GLINT Logo" style="max-width: 120px;">
@@ -38,7 +54,6 @@ export async function POST(req, res) {
     </div>
     `;
 
-    // Send the email to the user
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: email,
@@ -46,30 +61,12 @@ export async function POST(req, res) {
       html: emailHTML,
     });
 
-    // Save the subscription details to Google Sheets
-    const auth = new google.auth.GoogleAuth({
-      keyFile: "C:/Users/swabh/OneDrive/Desktop/Glint4u_Website/credentials.json", // Your path to credentials file
-      scopes: ["https://www.googleapis.com/auth/spreadsheets"],
-    });
-
-    const sheets = google.sheets({ version: "v4", auth });
-    const spreadsheetId = process.env.SPREADSHEET_ID; // Your spreadsheet ID
-    const range = "subscription!A:B"; // Change the range according to your sheet layout
-
-    await sheets.spreadsheets.values.append({
-      spreadsheetId,
-      range,
-      valueInputOption: "USER_ENTERED",
-      requestBody: {
-        values: [[email]],
-      },
-    });
-
     return NextResponse.json(
       { message: "Subscription successful, confirmation email sent." },
       { status: 201 }
     );
   } catch (error) {
+    console.error('Subscription error:', error);
     return NextResponse.json(
       { error: "Internal server error", details: error.message },
       { status: 500 }
