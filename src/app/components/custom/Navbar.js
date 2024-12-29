@@ -24,9 +24,9 @@ export default function Navbar() {
               <Link href="/about">
                 <li className={`nav-text `}>About</li>
               </Link>
-              <Link href={"/service"} >
+              {/* <Link href={"/service"} >
               <li className={`nav-text `}>Services</li>
-              </Link>
+              </Link> */}
               <Link href="/portfolio">
                 <li className='nav-text'>Portfolio</li>
               </Link>
@@ -51,9 +51,9 @@ export default function Navbar() {
             <Link href="/about" onClick={() => { setNavOpen(false) }}>
               <li className='nav-text'>About</li>
             </Link>
-            <Link href={"/service"} onClick={() => { setNavOpen(false) }}>
+            {/* <Link href={"/service"} onClick={() => { setNavOpen(false) }}>
             <li className='nav-text'>Services</li>
-            </Link>
+            </Link> */}
             <Link href="/portfolio"  onClick={() => { setNavOpen(false) }}>
               <li className='nav-text'>Portfolio</li>
             </Link>

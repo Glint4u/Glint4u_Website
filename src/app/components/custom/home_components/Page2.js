@@ -58,7 +58,7 @@ const features = [
         Icon: BellIcon,
         name: "Client Requests & Inquiries",
         description: "Delivering exceptional services with unmatched creativity and expertise.",
-        href: "/services",
+        href: "#service",
         cta: "Learn more",
         className: "col-span-3 lg:col-span-2",
         background: (
@@ -69,7 +69,7 @@ const features = [
         Icon: Share2Icon,
         name: "Technologies",
         description: "Powered by 15+ cutting-edge technologies.",
-        href: "#",
+        href: "#service",
         cta: "Learn more",
         className: "col-span-3 lg:col-span-2",
         background: (

@@ -7,13 +7,13 @@ import Unique1 from "../../../../../public/home/Unique1.jpg";
 export default function TimelineDemo() {
   const data = [
     {
-      title: "Customer-Centric upproach",
+      title: "Customer-Centric approach",
       content: (
-        <div>
+        <div className="flex flex-col justify-center h-full">
           <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-We focus on understanding your goals and delivering personalized solutions that align perfectly with your vision.
-</p>
+            className="text-neutral-800 dark:text-neutral-500 text-[16px] md:text-[18px] font-normal mb-8">
+            We focus on understanding your goals and delivering personalized solutions that align perfectly with your vision.
+          </p>
           {/* <div className="grid grid-cols-2 gap-4">
             <Image
               src={Unique1}
@@ -44,20 +44,18 @@ We focus on understanding your goals and delivering personalized solutions that 
       ),
     },
     {
-      title: "Early 2023",
+      title: "Beyond the Ordinary",
       content: (
-        <div>
+        <div className="flex flex-col justify-center h-full">
           <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            I usually run out of copy, but when I see content this big, I try to
-            integrate lorem ipsum.
+            className="text-neutral-800 dark:text-neutral-500 text-[16px] md:text-[18px] font-normal mb-8">
+            We don’t just follow trends; we set them.
           </p>
           <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Lorem ipsum is for people who are too lazy to write copy. But we are
-            not. Here are some more example of beautiful designs I built.
+            className="text-neutral-800 dark:text-neutral-500 text-[16px] md:text-[18px] font-normal mb-8">
+            Our designs and solutions stand out by pushing creative and technological boundaries.
           </p>
-          <div className="grid grid-cols-2 gap-4">
+          {/* <div className="grid grid-cols-2 gap-4">
             <Image
               src="https://assets.aceternity.com/pro/hero-sections.png"
               alt="hero template"
@@ -82,41 +80,45 @@ We focus on understanding your goals and delivering personalized solutions that 
               width={500}
               height={500}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]" />
-          </div>
+          </div> */}
         </div>
       ),
     },
     {
-      title: "Seamless Workflow",
+      title: "Crafted for Impact",
       content: (
-        <div>
-          <p
-            className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-            Deployed 5 new components on Aceternity today
-          </p>
-          <div className="mb-8">
+        <div className="flex flex-col justify-center h-full text-neutral-500 ">
+          <div className="text-[16px] md:text-[18px] mb-[10px]">
+            <b>
+            Tech isn't just functional; it's transformative.
+            </b>
+            <p>
+            We engineer systems that don't just work but elevate your business to new heights. Here's how we do it:
+            </p>
+          </div>
+          <div className="mb-8 flex flex-col gap-[8px]">
             <div
-              className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Card grid component
+              className="flex gap-2 items-center text-neutral-700 dark:text-neutral-500 text-[16px] md:text-[18px]">
+              ✅ Custom Solutions
             </div>
             <div
-              className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Startup template Aceternity
+              className="flex gap-2 items-center text-neutral-700 dark:text-neutral-500 text-[16px] md:text-[18px]">
+              ✅ Scalable Design
             </div>
             <div
-              className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Random file upload lol
+              className="flex gap-2 items-center text-neutral-700 dark:text-neutral-500 text-[16px] md:text-[18px]">
+              ✅ User-Centric Approach
             </div>
             <div
-              className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Himesh Reshammiya Music CD
+              className="flex gap-2 items-center text-neutral-700 dark:text-neutral-500 text-[16px] md:text-[18px]">
+              ✅ Cutting-Edge Technology
             </div>
             <div
-              className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Salman Bhai Fan Club registrations open
+              className="flex gap-2 items-center text-neutral-700 dark:text-neutral-500 text-[16px] md:text-[18px]">
+              ✅ Reliable Support
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          {/* <div className="grid grid-cols-2 gap-4">
             <Image
               src="https://assets.aceternity.com/pro/hero-sections.png"
               alt="hero template"
@@ -141,7 +143,7 @@ We focus on understanding your goals and delivering personalized solutions that 
               width={500}
               height={500}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]" />
-          </div>
+          </div> */}
         </div>
       ),
     },

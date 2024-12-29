@@ -86,11 +86,11 @@ export default function HeroSection() {
                     </span>
                   </Link>
                 </HoverBorderGradient>
-                <HoverBorderGradient className="shadow-2xl">
+                {/* <HoverBorderGradient className="shadow-2xl">
                   <span className="flex items-center gap-[10px] whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
                     <MessageCircleMore size={19} /> Chat with us
                   </span>
-                </HoverBorderGradient>
+                </HoverBorderGradient> */}
               </div>
             </div>
           </motion.h1>
