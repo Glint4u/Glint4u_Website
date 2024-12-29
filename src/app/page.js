@@ -16,7 +16,10 @@ export default function Home() {
       <HeroSection />
       <Page2 />
       <Page3 />
-      <CardDemo />
+      <div id="service">
+
+        <CardDemo />
+      </div>
       <TimelineDemo />
       {/* <TabsDemo /> */}
       {/* <AppleCardsCarouselDemo /> */}

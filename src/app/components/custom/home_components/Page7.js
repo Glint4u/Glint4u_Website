@@ -44,4 +44,33 @@ const testimonials = [
         title: "Owner, Burger Bistro",
         image: SachinMishra,
     },
+    {
+        quote:
+            "Glint has been an absolute game-changer for us! Its intuitive interface, robust analytics, and seamless collaboration features have elevated the way we approach projects and team management. ",
+        name: "Maulik Soni",
+        title: "Director, Shriji Education Services",
+        image: MaulikSoni,
+    },
+    {
+        quote:
+            "They have truly impressed me with its sleek, modern design and efficient backend system. The intuitive, responsive interface and secure, reliable performance make it a standout choice. I highly recommend it for anyone seeking exceptional design and functionality",
+        name: "Sachin Mishra",
+        title: "Owner, Burger Bistro",
+        image: SachinMishra,
+    },
+    {
+        quote:
+            "Glint has been an absolute game-changer for us! Its intuitive interface, robust analytics, and seamless collaboration features have elevated the way we approach projects and team management. ",
+        name: "Maulik Soni",
+        title: "Director, Shriji Education Services",
+        image: MaulikSoni,
+    },
+    {
+        quote:
+            "They have truly impressed me with its sleek, modern design and efficient backend system. The intuitive, responsive interface and secure, reliable performance make it a standout choice. I highly recommend it for anyone seeking exceptional design and functionality",
+        name: "Sachin Mishra",
+        title: "Owner, Burger Bistro",
+        image: SachinMishra,
+    },
+    
 ];

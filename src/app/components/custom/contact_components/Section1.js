@@ -79,7 +79,7 @@ export default function Section1() {
         </div>
       </div>
       <div>
-        <div className="gap-[20px] flex flex-col justify-center p-[15px] md:p-[25px] sm:min-w-[400px] w-[100%] sm:w-[500px] m-auto border-[1px] border-[#6E6E6E] min-h-[500px] h-fit rounded-[10px] mt-[50px]">
+        <div className="gap-[20px] flex flex-col justify-center p-[15px] md:p-[25px] sm:min-w-[400px] w-[100%] sm:w-[60%] m-auto border-[1px] border-[#6E6E6E] min-h-[500px] h-fit rounded-[10px] mt-[50px]">
           <div>
             <div className="text-[#ffffff] text-[25px] font-semibold">
               Welcome to glint

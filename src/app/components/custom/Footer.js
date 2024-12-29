@@ -53,7 +53,7 @@ export default function Footer()
         <div className='w-full min-h-[400px] h-fit pt-[50px] footer-bg border-t-[3px] border-[#ffffff1b] '>
             <div className=' w-[85%] p-2 min-h-[300px] h-fit m-auto flex flex-col md:flex-row justify-between gap-[50px] '>
                 <div className='flex justify-between w-full md:w-[45%]'>
-                    <div className='flex flex-col gap-[30px]'>
+                    <div className='flex flex-col gap-[30px] items-center'>
                         <Image className=' w-[100px] md:w-[150px]' src={Logo} />
                         <div>
                             <ul className='flex text-white gap-[30px]'>
@@ -75,9 +75,9 @@ export default function Footer()
                                 <Link href="/about">
                                     <li>About</li>
                                 </Link>
-                                <Link href={"/service"}>
+                                {/* <Link href={"/service"}>
                                 <li>Services</li>
-                                </Link>
+                                </Link> */}
                                 <Link href="/portfolio">
                                     <li>Portfolio</li>
                                 </Link>
@@ -100,7 +100,7 @@ export default function Footer()
                         <form onSubmit={handleSubscribe} className='flex flex-wrap items-center justify-center gap-[20px] pb-[20px] '>
                             <input
                                 type="email"
-                                className='text-[#ffffff41] font-normal text-[14px] md:text-[16px] w-[200px] h-[40px] md:w-[250px] md:h-[45px] rounded-[10px] pl-[20px] bg-[#46464641] border-[1px] border-[#ffffff16]'
+                                className=' font-normal text-[14px] md:text-[16px] w-[200px] h-[40px] md:w-[250px] md:h-[45px] rounded-[10px] pl-[20px] bg-[#46464641] border-[1px] border-[#ffffff16]'
                                 placeholder='glint4u@gmail.com'
                                 value={email}
                                 disabled={loading}
@@ -119,8 +119,8 @@ export default function Footer()
 
             </div>
 
-            <div className='text-[#ffffff31] text-[14px] md:text-[17px] w-[85%] h-[100px] m-auto border-t-[2px] border-[#ffffff2a] flex flex-col md:flex-row  justify-center md:justify-between items-center'>
-                <div>2024@ All rights reserved by glint </div>
+            <div className='text-[#ffffff6b] text-[14px] md:text-[17px] w-[85%] h-[100px] m-auto border-t-[2px] border-[#ffffff2a] flex flex-col md:flex-row  justify-center md:justify-between items-center'>
+                <div>© glint 2024. All rights reserved.</div>
                 <div>we make tech feel better.</div>
             </div>
 

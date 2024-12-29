@@ -20,6 +20,10 @@
 import React from "react";
 import { Vortex } from "../../ui/Vortex";
 import Link from "next/link";
+import { HoverBorderGradient } from "../../ui/HoverBorderGradient";
+import { Phone, CalendarCheck, MessageCircleMore } from "lucide-react";
+
+
 
 export function VortexDemoSecond() {
     return (
@@ -39,10 +43,13 @@ export function VortexDemoSecond() {
                         First five clients enjoy our services free! Grab the chance to kickstart your journey with Glint now!
                     </p>
                     <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
-                        <Link href="/contact"
-                            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
-                            Contact now
-                        </Link>
+                        <HoverBorderGradient className="shadow-2xl">
+                            <Link href="https://cal.com/glint" target="_blank">
+                                <span className="flex items-center gap-[10px] whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                                    <CalendarCheck size={19} /> Book a strategy call
+                                </span>
+                            </Link>
+                        </HoverBorderGradient>
                     </div>
                 </div>
             </Vortex>

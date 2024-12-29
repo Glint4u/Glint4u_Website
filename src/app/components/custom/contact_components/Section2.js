@@ -6,21 +6,33 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 // FAQ data array
 const faqData = [
   {
-    question: "What services do you offer?",
-    answer: "We offer a wide range of web development and design services, including custom website creation, e-commerce solutions, and mobile app development."
+    question: "What services does Glint provide?",
+    answer: "We offer UI/UX design, website development, API development, DevOps, SEO, IT consulting, and web hosting."
   },
   {
-    question: "How long does it typically take to complete a project?",
-    answer: "Project timelines vary depending on the scope and complexity. A simple website might take 2-4 weeks, while a more complex application could take 2-3 months or more."
+    question: "How do I start a project with glint?",
+    answer: "Contact us via our form or email, and we'll discuss your requirements in detail."
   },
   {
-    question: "Do you provide ongoing support after the project is completed?",
-    answer: "Yes, we offer various support and maintenance packages to ensure your digital product continues to perform optimally after launch."
+    question: "Do you work with startups or enterprises?",
+    answer: "We cater to both startups and enterprises, tailoring solutions to fit their unique needs."
   },
   {
-    question: "What is your pricing structure?",
-    answer: "Our pricing is project-based and depends on the specific requirements of each client. We provide detailed quotes after an initial consultation."
-  }
+    question: "How long does a typical project take?",
+    answer: "It depends on the project scope. We'll provide a timeline after the initial consultation."
+  },
+  {
+    question: "What is the cost of your services?",
+    answer: "Pricing varies by project; we'll give you a customized quote after understanding your needs."
+  },
+  {
+    question: "Can I track the progress of my project?",
+    answer: "Yes, we provide regular updates and involve you in key milestones."
+  },
+  {
+    question: "Do you offer support after project completion?",
+    answer: "Absolutely! We offer maintenance and support to ensure long-term success."
+  },
 ];
 
 // Individual FAQ item component
@@ -63,7 +75,7 @@ const BlackThemedFAQ = () => {
   };
 
   return (
-    <section className="bg-black text-white py-12 px-4 sm:px-6 lg:px-8 pb-[100px] md:pb-[250px]">
+    <section className="m-auto bg-black text-white py-12 px-4 sm:px-6 lg:px-8 pb-[50px] md:pb-[100px]">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
         <div className="space-y-4">

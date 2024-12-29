@@ -1,10 +1,12 @@
 import React from 'react'
-import { WavyBackgroundDemo } from '../components/custom/portfolio_components/Section1'
+import HeroSection from '../components/custom/portfolio_components/Section1'
+import { ThreeDCardDemo } from '../components/custom/portfolio_components/Section2'
 
 export default function page() {
   return (
     <div>
-        <WavyBackgroundDemo />
+        <HeroSection />
+        <ThreeDCardDemo />
     </div>
   )
 }
