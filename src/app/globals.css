@@ -196,12 +196,12 @@ body {
   100% { transform: rotate(360deg); }
 }
 
-
+/* 
 input::placeholder{
   color: #ffffff41;
 }
 
-input::-ms-input-placeholder { /* Edge 12 -18 */
+input::-ms-input-placeholder { 
   color: #ffffff41;
 }
 
@@ -212,10 +212,10 @@ textarea::placeholder{
   color: #ffffff41;
 }
 
-textarea::-ms-input-placeholder { /* Edge 12 -18 */
+textarea::-ms-input-placeholder { 
   color: #ffffff41;
 }
 
 textarea{
   color: #bcbcbc !important;
-}
+} */
