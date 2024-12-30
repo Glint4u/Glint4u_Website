@@ -13,7 +13,7 @@ export default function Section2() {
                 </div>
                 <div className='w-full md:w-[50%] mt-[30px] md:mt-0 text-[14px] md:text-[17px] text-[#ffffffc4]'>
                     <div >
-                        "glint" symbolizes clarity, brilliance, and the spark of innovation. It represents our commitment to creating seamless, intuitive experiences that illuminate the path to success. Far from just a tool, Glint is a platform that fosters collaboration, enhances productivity, and drives exceptional service delivery.
+                        "glint" symbolizes clarity, brilliance, and the spark of innovation. It represents our commitment to creating seamless, intuitive experiences that illuminate the path to success. Far from just a tool, glint is a platform that fosters collaboration, enhances productivity, and drives exceptional service delivery.
                     </div>
                     <div className='mt-[20px]'>
                         The name embodies our mission to bring sharp focus and precision to every interaction, helping businesses achieve their goals with ease and efficiency.

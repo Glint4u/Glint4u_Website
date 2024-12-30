@@ -41,7 +41,7 @@ export async function POST(req, res) {
 
     const emailHTML = `
     <div style="text-align: center; font-family: Arial, sans-serif; padding: 20px;">
-        <img src="https://res.cloudinary.com/dessvl8l8/image/upload/f_auto,q_auto/zrrbrgiph9iycaabzth1" alt="GLINT Logo" style="max-width: 120px;">
+        <img src="https://res.cloudinary.com/dessvl8l8/image/upload/f_auto,q_auto/zrrbrgiph9iycaabzth1" alt="glint Logo" style="max-width: 120px;">
         <h2>Thank You for Subscribing!</h2>
         <p>Hi Subscriber,</p>
         <p>Thank you for subscribing to our newsletter!</p>

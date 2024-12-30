@@ -37,7 +37,7 @@ export async function POST(req, res) {
 
     const emailHTML = `
     <div style="text-align: center; font-family: Arial, sans-serif; padding: 20px;">
-        <img src="https://res.cloudinary.com/dessvl8l8/image/upload/f_auto,q_auto/zrrbrgiph9iycaabzth1" alt="GLINT Logo" style="max-width: 120px;">
+        <img src="https://res.cloudinary.com/dessvl8l8/image/upload/f_auto,q_auto/zrrbrgiph9iycaabzth1" alt="glint Logo" style="max-width: 120px;">
         <h2>Thank You for Reaching Out!</h2>
         <p>Hi ${firstName},</p>
         <p>We have received your message and one of our team members will get back to you shortly.</p>
@@ -60,7 +60,7 @@ export async function POST(req, res) {
 
     const devEmailHTML = `
     <div style="font-family: Arial, sans-serif; padding: 20px; color: #000000;">
-        <img src="https://res.cloudinary.com/dessvl8l8/image/upload/f_auto,q_auto/zrrbrgiph9iycaabzth1" alt="GLINT Logo" style="max-width: 120px;">
+        <img src="https://res.cloudinary.com/dessvl8l8/image/upload/f_auto,q_auto/zrrbrgiph9iycaabzth1" alt="glint Logo" style="max-width: 120px;">
         <h2>New Contact Request</h2>
         <p>Hey there,</p>
         <p>You have a new message from the contact form on your website.</p>
