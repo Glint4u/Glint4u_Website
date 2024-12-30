@@ -3,7 +3,7 @@ import Navbar from "./components/custom/Navbar";
 import Footer from "./components/custom/Footer";
 import { Toaster } from 'react-hot-toast';
 import { Analytics } from '@vercel/analytics/next';
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
   title: "glint",
@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Analytics />
+        <SpeedInsights/>
         <Footer />
       </body>
     </html>
