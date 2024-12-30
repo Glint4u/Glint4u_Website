@@ -2,6 +2,8 @@ import "./globals.css";
 import Navbar from "./components/custom/Navbar";
 import Footer from "./components/custom/Footer";
 import { Toaster } from 'react-hot-toast';
+import { Analytics } from '@vercel/analytics/next';
+
 
 export const metadata = {
   title: "glint",
@@ -16,6 +18,7 @@ export default function RootLayout({ children }) {
         reverseOrder={false}/>
         <Navbar />
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
