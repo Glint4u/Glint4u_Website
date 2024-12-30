@@ -32,7 +32,7 @@ export function InfiniteMovingCardsDemo() {
 const testimonials = [
     {
         quote:
-            "Glint has been an absolute game-changer for us! Its intuitive interface, robust analytics, and seamless collaboration features have elevated the way we approach projects and team management. ",
+            "glint has been an absolute game-changer for us! Its intuitive interface, robust analytics, and seamless collaboration features have elevated the way we approach projects and team management. ",
         name: "Maulik Soni",
         id:1,
         title: "Director, Shriji Education Services",
@@ -48,7 +48,7 @@ const testimonials = [
     },
     {
         quote:
-            "Glint has been an absolute game-changer for us! Its intuitive interface, robust analytics, and seamless collaboration features have elevated the way we approach projects and team management. ",
+            "glint has been an absolute game-changer for us! Its intuitive interface, robust analytics, and seamless collaboration features have elevated the way we approach projects and team management. ",
         name: "Maulik Soni",
         id:3,
         title: "Director, Shriji Education Services",
@@ -64,7 +64,7 @@ const testimonials = [
     },
     {
         quote:
-            "Glint has been an absolute game-changer for us! Its intuitive interface, robust analytics, and seamless collaboration features have elevated the way we approach projects and team management. ",
+            "glint has been an absolute game-changer for us! Its intuitive interface, robust analytics, and seamless collaboration features have elevated the way we approach projects and team management. ",
         name: "Maulik Soni",
         id:5,
         title: "Director, Shriji Education Services",
