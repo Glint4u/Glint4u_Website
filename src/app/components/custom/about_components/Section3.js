@@ -14,7 +14,7 @@ export default function Section3() {
                         We care deeply about the quality of our work
                     </div>
                     <div className='text-[#ffffffc0] text-[14px] md:text-[17px] mb-[30px]'>
-                        glint has always embraced a flexible, distributed work model. Today, our dynamic team spans across multiple continents, united by a shared commitment to innovation, seamless execution, and a passion for design excellence. We are creators at our core, driven by a relentless pursuit of quality in every project we undertake. From the big picture to the smallest details, we take pride in delivering exceptional digital experiences that make a lasting impact.
+                        We have always embraced a flexible, distributed work model. Today, our dynamic team spans across multiple continents, united by a shared commitment to innovation, seamless execution, and a passion for design excellence. We are creators at our core, driven by a relentless pursuit of quality in every project we undertake. From the big picture to the smallest details, we take pride in delivering exceptional digital experiences that make a lasting impact.
                     </div>
                     <div>
                         <InteractiveHoverButton />
